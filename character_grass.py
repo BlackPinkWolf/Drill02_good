@@ -10,7 +10,7 @@ def render_all(x, y):
     clear_canvas_now()
     grass.draw_now(400,30)
     character.draw_now(x,y)
-    delay(0.1)
+    delay(0.01)
 
 
 def run_circle():
@@ -28,11 +28,19 @@ def run_rectangle():
     for x in range(50,750+1,10):
         render_all(x,90)
 
+    # right
+    for y in range(90,550+1,10):
+        render_all(750,y)
 
-    for x in range(750, 50, -10):
-        render_all(x,400)
+    # top
+    for x in range(750, 50-1, -10):
+        render_all(x,550)
+
+    # left
+    for y in range(550,90-1,-10):
+        render_all(50,y)
     
-    pass
+    
 
 while True:
     run_circle()
