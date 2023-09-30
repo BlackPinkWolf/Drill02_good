@@ -15,7 +15,6 @@ def render_all(x, y):
 
 def run_circle():
     print('circle')
-
     cx, cy, r = 400, 300, 200
     for deg in range(0,360,5):
         x = cx + r * math.cos(deg/360 * 2 * math.pi)
